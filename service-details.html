@@ -26,57 +26,85 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the body takes the full height */
+}
 
-  <!-- =======================================================
-  * Template Name: Multi
-  * Template URL: https://bootstrapmade.com/multi-responsive-bootstrap-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+.main {
+  min-height: 100vh; /* Set minimum height to full viewport height */
+  display: flex;
+  flex-direction: column; /* Optional: If you want a vertical layout */
+}
+
+.service-details {
+  flex: 1; /* Allow this section to grow and fill the space */
+}
+    .tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tablinks {
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  outline: none;
+  transition: 0.3s;
+}
+
+.tablinks:hover {
+  background-color: #ddd;
+}
+
+.tablinks.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none; /* Hidden by default */
+}
+
+.tabcontent.active {
+  display: block; /* Show active tab */
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+  </style>
 </head>
 
 <body class="service-details-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <div class="container-fluid container-xl position-relative d-flex align-items-center">
+        <img src="assets/img/emblem.png" width="70px" alt="">
+        <div style="padding-left: 1em; text-align: center; color: hsl(197, 87%, 69%); font-size: larger;"> የሐረሪ
+          ብ/ክ/መንግስት ትራንስፖርት እና <br>መንገድ ልማት ቢሮ</div>
 
+      </div>
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Multi</h1>
       </a>
-
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#hero" class="active">መነሻ ገጽ</a></li>
+          <li><a href="#about">ስለ እኛ</a></li>
+          <li><a href="#services">አገልግሎቶች</a></li>
+          <li><a href="#team">አስተዳደር</a></li>
+          <li><a href="#contact">መገኛችን</a></li>
+          <li><a href=""></a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="#about">Get Started</a>
 
     </div>
   </header>
@@ -84,76 +112,116 @@
   <main class="main">
     <!-- Service Details Section -->
     <section id="service-details" class="service-details section">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100" style="position: sticky;">
+                    <div class="service-box">
+                        <h4 class="d-none d-lg-block">Services List</h4> <!-- Hide heading in mobile -->
+                        <div class="tabs d-none d-lg-block">
+                            <button class="tablinks active" onclick="openTab(event, 'service1')">Service 1</button>
+                            <button class="tablinks" onclick="openTab(event, 'service2')">Service 2</button>
+                            <button class="tablinks" onclick="openTab(event, 'service3')">Service 3</button>
+                            <button class="tablinks" onclick="openTab(event, 'service4')">Service 4</button>
+                            <!-- Add more tabs as needed -->
+                        </div>
+                    </div>
+                </div><!-- End Services List -->
 
-      <div class="container">
-
-        <div class="row gy-5">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100" style="position: sticky;" >
-
-            <div class="service-box">
-              <h4>Serices List</h4>
-              <div class="services-list">
-                <a href="#" class="active"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Product Management</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Graphic Design</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Marketing</span></a>
-              </div>
-            </div><!-- End Services List -->
-
-     
-
-          </div>
-
-          <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
-            <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
-            <p>
-              Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
-            </ul>
-            <p>
-              Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
-            </p>
-            <p>
-              Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
-            </p>
-          </div>
-
+                <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
+                    <div id="service1" class="tabcontent active">
+                        <img src="assets/img/services1.jpg" alt="Service 1" class="img-fluid services-img">
+                        <h3>Service 1 Details</h3>
+                        <p>Description of service 1.</p>
+                    </div>
+                    <div id="service2" class="tabcontent">
+                        <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+                        <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
+                        <p>
+                            Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+                            <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+                            <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+                        </ul>
+                        <p>
+                            Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+                        </p>
+                        <p>
+                            Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+                        </p>
+                    </div>
+                    <div id="service3" class="tabcontent">
+                        <img src="assets/img/services3.jpg" alt="Service 3" class="img-fluid services-img">
+                        <h3>Service 3 Details</h3>
+                        <p>Description of service 3.</p>
+                    </div>
+                    <div id="service4" class="tabcontent">
+                        <img src="assets/img/services4.jpg" alt="Service 4" class="img-fluid services-img">
+                        <h3>Service 4 Details</h3>
+                        <p>Description of service 4.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-      </div>
-
     </section><!-- /Service Details Section -->
+</main>
 
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-
-  
-
+<footer id="footer" class="footer dark-background">
     <div class="container copyright text-center mt-4">
-      <p>© <strong class="px-1 sitename">የሐረሪ ብ/ክ/መንግስት ትራንስፖርት እና መንገድ ልማት ቢሮ</strong></p>
-
+        <p>© <strong class="px-1 sitename">የሐረሪ ብ/ክ/መንግስት ትራንስፖርት እና መንገድ ልማት ቢሮ</strong></p>
     </div>
+</footer>
 
-  </footer>
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Preloader -->
+<div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
 
-  <!-- Preloader -->
-  <div id="preloader">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+<script>
+    function openTab(evt, serviceName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.remove("active");
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+
+        // Show the current tab and add an "active" class to the button that opened the tab
+        document.getElementById(serviceName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+    }
+</script>
+
+<style>
+    /* CSS for mobile view */
+    @media (max-width: 991.98px) {
+        .tabs {
+            display: none; /* Hide tabs on mobile */
+        }
+        .tabcontent {
+            display: block; /* Show all content */
+        }
+        .tabcontent.active {
+            display: block; /* Ensure active content is displayed */
+        }
+    }
+</style>
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
